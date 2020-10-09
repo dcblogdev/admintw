@@ -1,0 +1,33 @@
+{
+  "name": "admintw",
+  "version": "1.0.0",
+  "description": "Admin theme with TailwindCSS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dcblogdev/admintw.git"
+  },
+  "keywords": [
+    "theme",
+    "tailwindcss"
+  ],
+  "author": "David Carr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dcblogdev/admintw/issues"
+  },
+  "homepage": "https://github.com/dcblogdev/admintw#readme",
+  "dependencies": {
+    "tailwindcss": "^1.8.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "latest",
+    "postcss-modules": "latest",
+    "autoprefixer": "^9.8.6"
+  }
+}
