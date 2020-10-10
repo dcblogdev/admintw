@@ -4,9 +4,7 @@
   "description": "Admin theme with TailwindCSS",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "build": "postcss tailwind.css -o public/css/tailwind.css"
   },
   "repository": {
     "type": "git",
@@ -17,17 +15,15 @@
     "tailwindcss"
   ],
   "author": "David Carr",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/dcblogdev/admintw/issues"
   },
   "homepage": "https://github.com/dcblogdev/admintw#readme",
+  "license": "ISC",
   "dependencies": {
-    "tailwindcss": "^1.8.0"
-  },
-  "devDependencies": {
-    "parcel-bundler": "latest",
-    "postcss-modules": "latest",
-    "autoprefixer": "^9.8.6"
+    "@fullhuman/postcss-purgecss": "^3.0.0",
+    "tailwindcss": "^1.8.13",
+    "autoprefixer": "^9.0.0",
+    "postcss-cli": "^8.1.0"
   }
 }
