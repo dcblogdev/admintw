@@ -9,5 +9,560 @@
 </head>
 <body>
 
+<div x-data="{ sidebarOpen: false }">
+
+<div class="flex justify-between bg-white border-b-1">
+
+    <div class="flex p-3">
+
+        <!--toggle sidebar on mobile-->
+        <button @click.stop="sidebarOpen = !sidebarOpen" class="md:hidden focus:outline-none pl-1 pr-2">
+            <svg class="w-6 transition ease-in-out duration-150" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"/>
+            </svg>
+        </button>
+
+        <a href="/index.html" class="font-bold">Admin<span class="text-blue-600">TW</span></a>
+
+    </div>
+
+    <div x-data="{ isOpen: false }">
+        <div>
+            <button @click="isOpen = !isOpen" class="flex text-gray-700 focus:outline-none p-3 mr-5">
+                <p>Developer</p>
+
+                <svg x-show="!isOpen" class="ml-1 pt-1 w-5 lg:block" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                </svg>
+
+                <svg x-show="isOpen" class="ml-1 pt-1 w-5 lg:block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />
+                </svg>
+            </button>
+        </div>
+
+        <div
+            x-show.transition="isOpen"
+            @click.away="isOpen = false"
+            class="origin-top-right absolute right-0 mr-5 w-48">
+            <div class="py-1 rounded-b-md bg-white shadow-xs">
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Settings</a>
+                <a href="login.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Log out</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="flex min-h-screen">
+
+    <!-- regular sidebar -->
+    <div class="hidden md:block w-1/6 bg-gray-800">
+        <ul>
+            <li class="bg-gray-800 text-gray-300 text-sm p-3 hover:bg-gray-900 hover:text-gray-200">
+                <a class="flex items-center" href="/index.html">
+                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="15px" height="15px">
+                      <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+                    </svg>
+                    Dashboard
+                </a>
+            </li>
+            <li class="bg-gray-800 text-gray-300 text-sm p-3 hover:bg-gray-900 hover:text-gray-200">
+                <a class="flex items-center" href="/starter.html">
+
+                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />
+                    </svg>
+                    Starter Page
+                </a>
+            </li>
+            <li>
+                <div x-data="{ isOpen: false }">
+                    <a @click="isOpen = !isOpen" x-on:click.prevent="" class="bg-gray-800 text-gray-300 text-sm p-3 hover:bg-gray-900 hover:text-gray-200 flex items-center" href="#">
+
+                        <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z" clip-rule="evenodd" />
+                        </svg>
+
+                        UL Elements
+
+                        <svg x-show="!isOpen" class="ml-auto h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+
+                        <svg x-show="isOpen" class="ml-auto h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />
+                        </svg>
+
+                    </a>
+                    <div x-show="isOpen">
+                        <ul>
+                            <li class="p-2 hover:bg-gray-900">
+                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/alerts.html">
+                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                     Alerts
+                                </a>
+                            </li>
+                            <li class="p-2 hover:bg-gray-900">
+                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/accordians.html">
+                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                     Accordians
+                                </a>
+                            </li>
+                            <li class="p-2 hover:bg-gray-900">
+                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/buttons.html">
+                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                     Buttons
+                                </a>
+                            </li>
+                            <li class="p-2 hover:bg-gray-900">
+                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/cards.html">
+                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                     Cards
+                                </a>
+                            </li>
+                            <li class="p-2 hover:bg-gray-900">
+                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/forms.html">
+                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                     Forms
+                                </a>
+                            </li>
+                            <li class="p-2 hover:bg-gray-900">
+                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/icons.html">
+                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                     Icons
+                                </a>
+                            </li>
+                            <li class="p-2 hover:bg-gray-900">
+                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/modals.html">
+                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                     Modals
+                                </a>
+                            </li>
+                            <li class="p-2 hover:bg-gray-900">
+                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/tabs.html">
+                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                     Tabs
+                                </a>
+                            </li>
+                            <li class="p-2 hover:bg-gray-900">
+                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/tables.html">
+                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                     Tables
+                                </a>
+                            </li>
+                            <li class="p-2 hover:bg-gray-900">
+                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/timeline.html">
+                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                     Timeline
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div x-data="{ isOpen: true }">
+                    <a @click="isOpen = !isOpen" x-on:click.prevent="" class="bg-gray-900 text-gray-300 text-sm p-3 hover:bg-gray-900 hover:text-gray-200 flex items-center" href="#">
+
+                        <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z" />
+                        </svg>
+
+                        Pages
+
+                        <svg x-show="!isOpen" class="ml-auto h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+
+                        <svg x-show="isOpen" class="ml-auto h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />
+                        </svg>
+
+                    </a>
+                    <div x-show="isOpen">
+                        <ul>
+                            <li class="p-2 bg-gray-900 hover:bg-gray-900">
+                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/profile.html">
+                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                     Profile
+                                </a>
+                            </li>
+                            <li class="p-2 hover:bg-gray-900">
+                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/login.html">
+                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                     Login
+                                </a>
+                            </li>
+                            <li class="p-2 hover:bg-gray-900">
+                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/register.html">
+                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                     Register
+                                </a>
+                            </li>
+                            <li class="p-2 hover:bg-gray-900">
+                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/forgot-password.html">
+                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                     Forgot Password
+                                </a>
+                            </li>
+                            <li class="p-2 hover:bg-gray-900">
+                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/404.html">
+                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                     404
+                                </a>
+                            </li>
+                            <li class="p-2 hover:bg-gray-900">
+                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/500.html">
+                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                     500
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!--sidebar on mobile-->
+    <div x-show.transition.origin.top.left="sidebarOpen" class="min-w-full bg-gray-800 md:hidden">
+        <ul>
+            <li class="bg-gray-800 text-gray-300 text-sm p-3 hover:bg-gray-900 hover:text-gray-200">
+                <a class="flex items-center" href="/index.html">
+                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="15px" height="15px">
+                      <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+                    </svg>
+                    Dashboard
+                </a>
+            </li>
+            <li class="bg-gray-900 text-gray-300 text-sm p-3 hover:bg-gray-900 hover:text-gray-200">
+                <a class="flex items-center" href="/starter.html">
+
+                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />
+                    </svg>
+                    Starter Page
+                </a>
+            </li>
+            <li>
+                <div x-data="{ isOpen: false }">
+                    <a @click="isOpen = !isOpen" x-on:click.prevent="" class="bg-gray-800 text-gray-300 text-sm p-3 hover:bg-gray-900 hover:text-gray-200 flex items-center" href="#">
+
+                        <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z" clip-rule="evenodd" />
+                        </svg>
+
+                        UL Elements
+
+                        <svg x-show="!isOpen" class="ml-auto h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+
+                        <svg x-show="isOpen" class="ml-auto h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />
+                        </svg>
+
+                    </a>
+                    <div x-show="isOpen">
+                        <ul>
+                            <li class="p-2 hover:bg-gray-900">
+                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/alerts.html">
+                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                     Alerts
+                                </a>
+                            </li>
+                            <li class="p-2 hover:bg-gray-900">
+                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/accordians.html">
+                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                     Accordians
+                                </a>
+                            </li>
+                            <li class="p-2 hover:bg-gray-900">
+                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/buttons.html">
+                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                     Buttons
+                                </a>
+                            </li>
+                            <li class="p-2 hover:bg-gray-900">
+                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/cards.html">
+                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                     Cards
+                                </a>
+                            </li>
+                            <li class="p-2 hover:bg-gray-900">
+                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/forms.html">
+                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                     Forms
+                                </a>
+                            </li>
+                            <li class="p-2 hover:bg-gray-900">
+                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/icons.html">
+                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                     Icons
+                                </a>
+                            </li>
+                            <li class="p-2 hover:bg-gray-900">
+                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/modals.html">
+                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                     Modals
+                                </a>
+                            </li>
+                            <li class="p-2 hover:bg-gray-900">
+                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/tabs.html">
+                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                     Tabs
+                                </a>
+                            </li>
+                            <li class="p-2 hover:bg-gray-900">
+                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/tables.html">
+                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                     Tables
+                                </a>
+                            </li>
+                            <li class="p-2 hover:bg-gray-900">
+                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/timeline.html">
+                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                     Timeline
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div x-data="{ isOpen: false }">
+                    <a @click="isOpen = !isOpen" x-on:click.prevent="" class="bg-gray-800 text-gray-300 text-sm p-3 hover:bg-gray-900 hover:text-gray-200 flex items-center" href="#">
+
+                        <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z" />
+                        </svg>
+
+                        Pages
+
+                        <svg x-show="!isOpen" class="ml-auto h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+
+                        <svg x-show="isOpen" class="ml-auto h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />
+                        </svg>
+
+                    </a>
+                    <div x-show="isOpen">
+                        <ul>
+                            <li class="p-2 hover:bg-gray-900">
+                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/profile.html">
+                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                     Profile
+                                </a>
+                            </li>
+                            <li class="p-2 hover:bg-gray-900">
+                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/login.html">
+                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                     Login
+                                </a>
+                            </li>
+                            <li class="p-2 hover:bg-gray-900">
+                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/register.html">
+                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                     Register
+                                </a>
+                            </li>
+                            <li class="p-2 hover:bg-gray-900">
+                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/forgot-password.html">
+                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                     Forgot Password
+                                </a>
+                            </li>
+                            <li class="p-2 hover:bg-gray-900">
+                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/404.html">
+                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                     404
+                                </a>
+                            </li>
+                            <li class="p-2 hover:bg-gray-900">
+                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/500.html">
+                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                     500
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- main content -->
+    <div class="flex-grow bg-gray-200 p-5">
+
+        <div class="flex justify-between text-gray-800">
+            <h1 class="text-2xl">User Profile</h1>
+            <ul class="flex space-x-1 text-xs pt-5">
+                <li><a href="/index.html" class="font-bold">Home</a> > </li>
+                <li><a href="#" class="font-bold">Pages</a> > </li>
+                <li>Profile</li>
+            </ul>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+
+            <div class="">
+
+                <div class="bg-white text-gray-700 p-3 border-t-4 border-blue-600">
+                    <div class="text-2xl text-center">Joe Bloggs</div>
+                    <div class="text-sm text-center">Job Title</div>
+
+                    <div class="flex justify-between border-t pt-1 mt-2">
+                        <div>Followers</div>
+                        <div class="text-blue-500">10</div>
+                    </div>
+
+                    <div class="flex justify-between border-t pt-1 mt-2">
+                        <div>Following</div>
+                        <div class="text-blue-500">10</div>
+                    </div>
+
+                    <div class="flex justify-between border-t border-b py-1 mt-2">
+                        <div>Friends</div>
+                        <div class="text-blue-500">10</div>
+                    </div>
+
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white w-full px-1 py-2 mt-5 rounded">Follow</button>
+
+                </div>
+
+            </div>
+
+            <div class="md:col-span-3 bg-white min-h-screen text-gray-700">
+
+                <div class="bg-gray-300">
+                    <div x-data="{ tab: window.location.hash ? window.location.hash.substring(1) : 'activity' }" class="w-full">
+                        <div class="flex">
+                            <button
+                                x-on:click="tab = 'activity'"
+                                x-bind:class="{ 'bg-white border-t-4 border-blue-600': tab === 'activity' }"
+                                @click.prevent="tab = 'activity'; window.location.hash = 'activity'"
+                                class="hover:bg-gray-200 text-gray-700 text-sm font-semibold focus:outline-none py-px px-3"
+                                type="button">
+                                Activity
+                            </button>
+                            <button
+                            x-on:click="tab = 'timeline'"
+                            x-bind:class="{ 'bg-white border-t-4 border-blue-600': tab === 'timeline' }"
+                            @click.prevent="tab = 'timeline'; window.location.hash = 'timeline'"
+                            class="hover:bg-gray-200 text-gray-700 font-semibold focus:outline-none mx-px py-2 px-4"
+                            type="button">
+                            Timeline
+                            </button>
+                            <button
+                                x-on:click="tab = 'settings'"
+                                x-bind:class="{ 'bg-white border-t-4 border-blue-600': tab === 'settings' }"
+                                @click.prevent="tab = 'settings'; window.location.hash = 'settings'"
+                                class="hover:bg-gray-200 text-gray-700 text-sm font-semibold focus:outline-none mx-px py-px md:py-2 px-3 md:px-4"
+                                type="button">
+                            Settings
+                            </button>
+                            <button
+                                class="text-gray-500 text-sm font-semibold cursor-not-allowed mx-px py-px md:py-2 px-3 md:px-4"
+                                type="button"
+                                disabled>
+                            Disabled
+                            </button>
+                        </div>
+
+                        <ul class="bg-white text-sm rounded-b p-4">
+                            <li x-show="tab === 'activity'">
+                                activity
+                            </li>
+                            <li x-show="tab === 'timeline'">
+                                timeline
+                            </li>
+                            <li x-show="tab === 'settings'">
+                                settings
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="bg-white p-2 flex justify-between text-xs">
+    <div>Copyright &copy; 2020 <a href="https://github.com/dcblogdev/admintw" target="_blank" class="text-blue-600">David Carr</a></div>
+    <div>Version 1.0.0</div>
+</div>
+
+</div>
 </body>
 </html>
