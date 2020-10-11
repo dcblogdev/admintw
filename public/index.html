@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>AdminTW</title>
+    <title>AdminTW Dashboard</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="/css/tailwind.css">
@@ -67,39 +67,21 @@
                     Dashboard
                 </a>
             </li>
-
             <li class="bg-gray-800 text-gray-300 text-sm p-3 hover:bg-gray-900 hover:text-gray-200">
-                <a class="flex items-center" href="/forms.html">
-                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="15px" height="15px">
-                      <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
+                <a class="flex items-center" href="/starter.html">
+
+                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />
                     </svg>
-                    Forms
+                    Starter Page
                 </a>
             </li>
-
-            <li class="bg-gray-800 text-gray-300 text-sm p-3 hover:bg-gray-900 hover:text-gray-200">
-                <a class="flex items-center " href="/cards.html">
-                    <svg class="mr-1 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path>
-                    </svg>
-                    Cards
-                </a>
-            </li>
-
-            <li class="bg-gray-800 text-gray-300 text-sm p-3 hover:bg-gray-900 hover:text-gray-200">
-                <a class="flex items-center " href="/tables.html">
-                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="15px" height="15px">
-                      <path fill-rule="evenodd" d="M14.243 5.757a6 6 0 10-.986 9.284 1 1 0 111.087 1.678A8 8 0 1118 10a3 3 0 01-4.8 2.401A4 4 0 1114 10a1 1 0 102 0c0-1.537-.586-3.07-1.757-4.243zM12 10a2 2 0 10-4 0 2 2 0 004 0z" clip-rule="evenodd" />
-                    </svg>  Tables
-                </a>
-            </li>
-
             <li>
                 <div x-data="{ isOpen: false }">
                     <a @click="isOpen = !isOpen" x-on:click.prevent="" class="bg-gray-800 text-gray-300 text-sm p-3 hover:bg-gray-900 hover:text-gray-200 flex items-center" href="#">
-                        <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+
+                        <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z" clip-rule="evenodd" />
                         </svg>
 
                         UL Elements
@@ -123,7 +105,6 @@
                                      Alerts
                                 </a>
                             </li>
-
                             <li class="p-2 hover:bg-gray-900">
                                  <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/accordians.html">
                                     <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -132,7 +113,6 @@
                                      Accordians
                                 </a>
                             </li>
-
                             <li class="p-2 hover:bg-gray-900">
                                  <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/buttons.html">
                                     <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -141,7 +121,22 @@
                                      Buttons
                                 </a>
                             </li>
-
+                            <li class="p-2 hover:bg-gray-900">
+                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/cards.html">
+                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                     Cards
+                                </a>
+                            </li>
+                            <li class="p-2 hover:bg-gray-900">
+                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/forms.html">
+                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                     Forms
+                                </a>
+                            </li>
                             <li class="p-2 hover:bg-gray-900">
                                  <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/icons.html">
                                     <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -150,7 +145,6 @@
                                      Icons
                                 </a>
                             </li>
-
                             <li class="p-2 hover:bg-gray-900">
                                  <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/modals.html">
                                     <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -159,7 +153,6 @@
                                      Modals
                                 </a>
                             </li>
-
                             <li class="p-2 hover:bg-gray-900">
                                  <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/tabs.html">
                                     <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -168,7 +161,14 @@
                                      Tabs
                                 </a>
                             </li>
-
+                            <li class="p-2 hover:bg-gray-900">
+                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/tables.html">
+                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                     Tables
+                                </a>
+                            </li>
                             <li class="p-2 hover:bg-gray-900">
                                  <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/timeline.html">
                                     <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -181,16 +181,15 @@
                     </div>
                 </div>
             </li>
-
             <li>
                 <div x-data="{ isOpen: false }">
                     <a @click="isOpen = !isOpen" x-on:click.prevent="" class="bg-gray-800 text-gray-300 text-sm p-3 hover:bg-gray-900 hover:text-gray-200 flex items-center" href="#">
-                        <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+
+                        <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z" />
                         </svg>
 
-                        Examples
+                        Pages
 
                         <svg x-show="!isOpen" class="ml-auto h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
@@ -249,14 +248,6 @@
                                       <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
                                     </svg>
                                      500
-                                </a>
-                            </li>
-                            <li class="p-2 hover:bg-gray-900">
-                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/starter.html">
-                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-                                    </svg>
-                                     Starter Page
                                 </a>
                             </li>
                         </ul>
@@ -277,39 +268,21 @@
                     Dashboard
                 </a>
             </li>
-
             <li class="bg-gray-800 text-gray-300 text-sm p-3 hover:bg-gray-900 hover:text-gray-200">
-                <a class="flex items-center" href="/forms.html">
-                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="15px" height="15px">
-                      <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
+                <a class="flex items-center" href="/starter.html">
+
+                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />
                     </svg>
-                    Forms
+                    Starter Page
                 </a>
             </li>
-
-            <li class="bg-gray-800 text-gray-300 text-sm p-3 hover:bg-gray-900 hover:text-gray-200">
-                <a class="flex items-center " href="/cards.html">
-                    <svg class="mr-1 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path>
-                    </svg>
-                    Cards
-                </a>
-            </li>
-
-            <li class="bg-gray-800 text-gray-300 text-sm p-3 hover:bg-gray-900 hover:text-gray-200">
-                <a class="flex items-center " href="/tables.html">
-                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="15px" height="15px">
-                      <path fill-rule="evenodd" d="M14.243 5.757a6 6 0 10-.986 9.284 1 1 0 111.087 1.678A8 8 0 1118 10a3 3 0 01-4.8 2.401A4 4 0 1114 10a1 1 0 102 0c0-1.537-.586-3.07-1.757-4.243zM12 10a2 2 0 10-4 0 2 2 0 004 0z" clip-rule="evenodd" />
-                    </svg>  Tables
-                </a>
-            </li>
-
             <li>
                 <div x-data="{ isOpen: false }">
                     <a @click="isOpen = !isOpen" x-on:click.prevent="" class="bg-gray-800 text-gray-300 text-sm p-3 hover:bg-gray-900 hover:text-gray-200 flex items-center" href="#">
-                        <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+
+                        <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z" clip-rule="evenodd" />
                         </svg>
 
                         UL Elements
@@ -333,7 +306,6 @@
                                      Alerts
                                 </a>
                             </li>
-
                             <li class="p-2 hover:bg-gray-900">
                                  <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/accordians.html">
                                     <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -342,7 +314,6 @@
                                      Accordians
                                 </a>
                             </li>
-
                             <li class="p-2 hover:bg-gray-900">
                                  <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/buttons.html">
                                     <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -351,7 +322,22 @@
                                      Buttons
                                 </a>
                             </li>
-
+                            <li class="p-2 hover:bg-gray-900">
+                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/cards.html">
+                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                     Cards
+                                </a>
+                            </li>
+                            <li class="p-2 hover:bg-gray-900">
+                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/forms.html">
+                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                     Forms
+                                </a>
+                            </li>
                             <li class="p-2 hover:bg-gray-900">
                                  <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/icons.html">
                                     <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -360,7 +346,6 @@
                                      Icons
                                 </a>
                             </li>
-
                             <li class="p-2 hover:bg-gray-900">
                                  <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/modals.html">
                                     <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -369,7 +354,6 @@
                                      Modals
                                 </a>
                             </li>
-
                             <li class="p-2 hover:bg-gray-900">
                                  <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/tabs.html">
                                     <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -378,7 +362,14 @@
                                      Tabs
                                 </a>
                             </li>
-
+                            <li class="p-2 hover:bg-gray-900">
+                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/tables.html">
+                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                     Tables
+                                </a>
+                            </li>
                             <li class="p-2 hover:bg-gray-900">
                                  <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/timeline.html">
                                     <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -394,12 +385,12 @@
             <li>
                 <div x-data="{ isOpen: false }">
                     <a @click="isOpen = !isOpen" x-on:click.prevent="" class="bg-gray-800 text-gray-300 text-sm p-3 hover:bg-gray-900 hover:text-gray-200 flex items-center" href="#">
-                        <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+
+                        <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z" />
                         </svg>
 
-                        Examples
+                        Pages
 
                         <svg x-show="!isOpen" class="ml-auto h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
@@ -460,14 +451,6 @@
                                      500
                                 </a>
                             </li>
-                            <li class="p-2 hover:bg-gray-900">
-                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/starter.html">
-                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-                                    </svg>
-                                     Starter Page
-                                </a>
-                            </li>
                         </ul>
                     </div>
                 </div>
@@ -476,45 +459,266 @@
     </div>
 
     <!-- main content -->
-    <div class="flex-grow bg-gray-200 p-5">
+    <div class="flex-grow bg-gray-200 px-4 py-2">
 
-        <div class="bg-white border-t-4 border-blue-500 rounded-b-lg shadow-lg p-2">
-
-            <div class="flex justify-between border-b border-blue-100">
-                <div>Customers</div>
-                <div><span class="text-red-600">*</span> = required</div>
-            </div>
-
-            <div class="md:flex md:space-x-8">
-
-            <div class="md:w-1/2 p-5">
-
-                <div class="mb-5">
-                    <label for="name" class="block text-sm font-medium leading-5 text-gray-700">Name <span class="text-red-600">*</span> </label>
-                    <input type="text" id="name" name="name" class="border border-gray-400 px-3 py-2 w-full rounded-md">
-                </div>
-
-                <div class="mb-5">
-                    <label for="password" class="block text-sm font-medium leading-5 text-gray-700">Password</label>
-                    <input type="password" id="password" name="password" class="border border-gray-400 px-3 py-2 w-full rounded-md">
-                </div>
-
-            </div>
-
-            <div class="md:w-1/2 p-5">
-
-                <div class="mb-5">
-                    <label for="name" class="block text-sm font-medium leading-5 text-gray-700">Name</label>
-                    <input type="text" id="name" name="name" class="border border-gray-400 px-3 py-2 w-full rounded-md">
-                </div>
-
-                <div class="mb-5">
-                    <label for="password" class="block text-sm font-medium leading-5 text-gray-700">Password</label>
-                    <input type="password" id="password" name="password" class="border border-gray-400 px-3 py-2 w-full rounded-md">
-                </div>
-
-            </div>
+        <div class="flex justify-between text-gray-800">
+            <h1 class="text-3xl">Dashboard</h1>
+            <ul class="flex space-x-1 text-xs pt-5">
+                <li><a href="/index.html" class="font-bold">Home</a> > </li>
+                <li>Dashboard</li>
+            </ul>
         </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+
+            <div class="bg-blue-400 text-white">
+                <div class="flex justify-between">
+                    <div>
+                        <div class="text-3xl text-bold pl-2 pt-2">173</div>
+                        <div class="text-sm pl-2 pb-2">New Sales</div>
+                    </div>
+                    <div class="justify-items-auto">
+                        <svg class="pt-2 pr-2 w-16 text-blue-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="flex bg-blue-600 text-xs p-2">
+                    <a href="#" class="pr-1">More info</a>
+                    <a href="#" class="pr-1"><svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd" />
+                    </svg></a>
+                </div>
+            </div>
+
+            <div class="bg-green-400 text-green-100">
+                <div class="flex justify-between">
+                    <div>
+                        <div class="text-3xl text-bold pl-2 pt-2">30%</div>
+                        <div class="text-sm pl-2 pb-2">Bounce Rate</div>
+                    </div>
+                    <div class="justify-items-auto">
+                        <svg class="pt-2 pr-2 w-16 text-green-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="flex bg-green-600 text-xs p-2">
+                    <a href="#" class="pr-1">More info</a>
+                    <a href="#" class="pr-1"><svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd" />
+                    </svg></a>
+                </div>
+            </div>
+
+            <div class="bg-orange-400 text-orange-100">
+                <div class="flex justify-between">
+                    <div>
+                        <div class="text-3xl text-bold pl-2 pt-2">34</div>
+                        <div class="text-sm pl-2 pb-2">User sign ups</div>
+                    </div>
+                    <div class="justify-items-auto">
+                        <svg class="pt-2 pr-2 w-16 text-orange-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="flex bg-orange-600 text-xs p-2">
+                    <a href="#" class="pr-1">More info</a>
+                    <a href="#" class="pr-1"><svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd" />
+                    </svg></a>
+                </div>
+            </div>
+
+            <div class="bg-indigo-400 text-indigo-100">
+                <div class="flex justify-between">
+                    <div>
+                        <div class="text-3xl text-bold pl-2 pt-2">10%</div>
+                        <div class="text-sm pl-2 pb-2">Referals</div>
+                    </div>
+                    <div class="justify-items-auto">
+                        <svg class="pt-2 pr-2 w-16 text-indigo-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="flex bg-indigo-600 text-xs p-2">
+                    <a href="#" class="pr-1">More info</a>
+                    <a href="#" class="pr-1"><svg class="w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd" />
+                    </svg></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-10">
+
+            <div class="bg-gray-100 text-gray-700 rounded-lg shadow-lg p-3">
+
+                <h3 class="text-2xl">Transactions</h3>
+
+                <div class="flex justify-between text-sm">
+                    <p>Latest transations history</p>
+                    <a href="#" class="text-blue-600">See All</a>
+                </div>
+
+                <div class="table w-full">
+                    <div class="table-row-group">
+                        <div class="table-row">
+                            <div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm">No</div>
+                            <div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm">Item</div>
+                            <div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm hidden sm:block">Status</div>
+                            <div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm">Amount</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">239</div>
+                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">Apple iPad Pro Pencil tips</div>
+                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm hidden sm:block">Order Places</div>
+                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">&pound;11.98</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">238</div>
+                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">Mario Odyssey Game</div>
+                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm hidden sm:block">Delivered</div>
+                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">&pound;49.99</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">237</div>
+                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">EMtronics 32" TV </div>
+                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm hidden sm:block">Out for Delivery</div>
+                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">&pound;149.99</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">236</div>
+                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">Iphone Charger Cable</div>
+                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm hidden sm:block">Out for Delivery</div>
+                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">&pound;6.99</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">235</div>
+                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">Whiskas cat foot</div>
+                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm hidden sm:block">Delivered</div>
+                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">&pound;20.93</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="bg-gray-100 text-gray-700 rounded-lg shadow-lg p-3">
+
+                <h3 class="text-2xl">Bestseller</h3>
+
+                <div class="flex justify-between text-sm">
+                    <p>Top products sold this week</p>
+                    <a href="#" class="text-blue-600">See All</a>
+                </div>
+
+                <div class="table w-full">
+                    <div class="table-row-group">
+                        <div class="table-row">
+                            <div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm">QTY</div>
+                            <div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm">Item</div>
+                            <div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm">Amount</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">382</div>
+                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">Macbook Air</div>
+                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">&pound;600</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">180</div>
+                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">Mario Odyssey Game</div>
+                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">&pound;49.99</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">130</div>
+                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">iPhone 11</div>
+                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">&pound;800.99</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">70</div>
+                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">Iphone Charger Cable</div>
+                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">&pound;6.99</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">30</div>
+                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">Whiskas cat food</div>
+                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">&pound;20.93</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 my-10">
+
+            <div class="bg-gray-100 text-gray-700 rounded-lg shadow-lg p-3">
+
+                <h3 class="text-2xl">Sessions</h3>
+
+                <div class="table w-full">
+                    <div class="table-row-group">
+                        <div class="table-row">
+                            <div class="table-cell text-gray-700 py-2 text-sm"><p>Sessions by device type</p></div>
+                            <div class="table-cell text-gray-700 py-2 text-sm"></div>
+                            <div class="table-cell text-gray-700 py-2 text-sm"><a href="#" class="text-blue-600">See All</a></div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell text-gray-700 py-2 text-sm">Desktop</div>
+                            <div class="table-cell text-gray-700 py-2 text-sm">247</div>
+                            <div class="table-cell text-gray-700 py-2 text-sm"><span class="text-green-600">+</span>4.2%</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell text-gray-700 py-2 text-sm">Mobile</div>
+                            <div class="table-cell text-gray-700 py-2 text-sm">198</div>
+                            <div class="table-cell text-gray-700 py-2 text-sm"><span class="text-red-600">-</span>2.2%</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell text-gray-700 py-2 text-sm">Table</div>
+                            <div class="table-cell text-gray-700 py-2 text-sm">35</div>
+                            <div class="table-cell text-gray-700 py-2 text-sm"><span class="text-green-600">+</span>8.2%</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="bg-gray-100 text-gray-700 rounded-lg shadow-lg p-3">
+
+                <h3 class="text-2xl">Social Sources</h3>
+
+                <div class="table w-full">
+                    <div class="table-row-group">
+                        <div class="table-row">
+                            <div class="table-cell text-gray-700 py-2 text-sm"><p>Visits from social sources</p></div>
+                            <div class="table-cell text-gray-700 py-2 text-sm"></div>
+                            <div class="table-cell text-gray-700 py-2 text-sm"><a href="#" class="text-blue-600">See All</a></div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell text-gray-700 py-2 text-sm">Facebook</div>
+                            <div class="table-cell text-gray-700 py-2 text-sm">247</div>
+                            <div class="table-cell text-gray-700 py-2 text-sm"><span class="text-green-600">+</span>4.2%</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell text-gray-700 py-2 text-sm">Twitter</div>
+                            <div class="table-cell text-gray-700 py-2 text-sm">198</div>
+                            <div class="table-cell text-gray-700 py-2 text-sm"><span class="text-red-600">-</span>2.2%</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell text-gray-700 py-2 text-sm">YouTube</div>
+                            <div class="table-cell text-gray-700 py-2 text-sm">35</div>
+                            <div class="table-cell text-gray-700 py-2 text-sm"><span class="text-green-600">+</span>8.2%</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
 
     </div>
