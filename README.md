@@ -1,4 +1,4 @@
-# admintw
+# AdminTW
 
 The theme sources files are located in public.
 
