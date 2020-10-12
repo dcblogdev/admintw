@@ -521,12 +521,20 @@
                             Timeline
                             </button>
                             <button
-                                x-on:click="tab = 'settings'"
-                                x-bind:class="{ 'bg-white border-t-4 border-blue-600': tab === 'settings' }"
-                                @click.prevent="tab = 'settings'; window.location.hash = 'settings'"
+                                x-on:click="tab = 'comments'"
+                                x-bind:class="{ 'bg-white border-t-4 border-blue-600': tab === 'comments' }"
+                                @click.prevent="tab = 'comments'; window.location.hash = 'comments'"
                                 class="hover:bg-gray-200 text-gray-700 text-sm font-semibold focus:outline-none mx-px py-px md:py-2 px-3 md:px-4"
                                 type="button">
-                            Settings
+                            Comments
+                            </button>
+                            <button
+                                x-on:click="tab = 'sentEmail'"
+                                x-bind:class="{ 'bg-white border-t-4 border-blue-600': tab === 'sentEmail' }"
+                                @click.prevent="tab = 'sentEmail'; window.location.hash = 'sentEmail'"
+                                class="hover:bg-gray-200 text-gray-700 text-sm font-semibold focus:outline-none mx-px py-px md:py-2 px-3 md:px-4"
+                                type="button">
+                            Sent Email
                             </button>
                             <button
                                 class="text-gray-500 text-sm font-semibold cursor-not-allowed mx-px py-px md:py-2 px-3 md:px-4"
@@ -543,8 +551,100 @@
                             <li x-show="tab === 'timeline'">
                                 timeline
                             </li>
-                            <li x-show="tab === 'settings'">
-                                settings
+                            <li x-show="tab === 'comments'">
+
+                                <form>
+                                    <p><textarea name="comments" class="border w-full p-2" placeholder="Comment"></textarea> </p>
+                                    <p><button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 mt-5 rounded">Add Comment</button></p>
+                                </form>
+
+                                <div class="flex mt-10">
+
+                                    <div class="w-12 h-12 pt-3 relative mb-4">
+                                        <div class="rounded-full overflow-hidden">
+                                            <img src="https://pickaface.net/gallery/avatar/unr_random_180410_1905_z1exb.png" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="ml-5 w-11/12">
+                                        <div class="text-xs text-right text-grey-500 w-full">created 12th October 2020 07:57:46 AM</div>
+                                        <div class="bg-gray-600 text-white rounded w-full p-2">I called Joe, no answer.</div>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li x-show="tab === 'sentEmail'">
+
+                                <div class="table w-full">
+                                    <div class="table-row-group">
+                                        <div class="table-row">
+                                            <div class="table-cell bg-gray-600 text-gray-200 px-4 py-2 text-sm">Distribution List</div>
+                                            <div class="table-cell bg-gray-600 text-gray-200 px-4 py-2 text-sm">Template</div>
+                                            <div class="table-cell bg-gray-600 text-gray-200 px-4 py-2 text-sm">Date Sent</div>
+                                            <div class="table-cell bg-gray-600 text-gray-200 px-4 py-2 text-sm">Unsubscribed</div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">Newsletter</div>
+                                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">October's Newsletter</div>
+                                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">1st October 2020</div>
+                                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">No</div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm">Newsletter</div>
+                                            <div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm">September's Newsletter</div>
+                                            <div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm">1st September 2020</div>
+                                            <div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm">No</div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">Newsletter</div>
+                                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">August's Newsletter</div>
+                                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">1st August 2020</div>
+                                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">No</div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm">Newsletter</div>
+                                            <div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm">July's Newsletter</div>
+                                            <div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm">1st July 2020</div>
+                                            <div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm">No</div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">Newsletter</div>
+                                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">June's Newsletter</div>
+                                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">1st June 2020</div>
+                                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">No</div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm">Newsletter</div>
+                                            <div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm">May's Newsletter</div>
+                                            <div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm">1st May 2020</div>
+                                            <div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm">No</div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">Newsletter</div>
+                                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">April's Newsletter</div>
+                                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">1st April 2020</div>
+                                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">No</div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm">Newsletter</div>
+                                            <div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm">March's Newsletter</div>
+                                            <div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm">1st March 2020</div>
+                                            <div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm">No</div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">Newsletter</div>
+                                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">February's Newsletter</div>
+                                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">1st February 2020</div>
+                                            <div class="table-cell bg-gray-200 text-gray-700 px-4 py-2 text-sm">No</div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm">Newsletter</div>
+                                            <div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm">January's Newsletter</div>
+                                            <div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm">1st January 2020</div>
+                                            <div class="table-cell bg-gray-400 text-gray-700 px-4 py-2 text-sm">No</div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </li>
                         </ul>
                     </div>
