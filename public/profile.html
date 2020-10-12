@@ -502,24 +502,8 @@
             <div class="md:col-span-3 bg-white min-h-screen text-gray-700">
 
                 <div class="bg-gray-300">
-                    <div x-data="{ tab: window.location.hash ? window.location.hash.substring(1) : 'activity' }" class="w-full">
+                    <div x-data="{ tab: window.location.hash ? window.location.hash.substring(1) : 'comments' }" class="w-full">
                         <div class="flex">
-                            <button
-                                x-on:click="tab = 'activity'"
-                                x-bind:class="{ 'bg-white border-t-4 border-blue-600': tab === 'activity' }"
-                                @click.prevent="tab = 'activity'; window.location.hash = 'activity'"
-                                class="hover:bg-gray-200 text-gray-700 text-sm font-semibold focus:outline-none py-px px-3"
-                                type="button">
-                                Activity
-                            </button>
-                            <button
-                            x-on:click="tab = 'timeline'"
-                            x-bind:class="{ 'bg-white border-t-4 border-blue-600': tab === 'timeline' }"
-                            @click.prevent="tab = 'timeline'; window.location.hash = 'timeline'"
-                            class="hover:bg-gray-200 text-gray-700 font-semibold focus:outline-none mx-px py-2 px-4"
-                            type="button">
-                            Timeline
-                            </button>
                             <button
                                 x-on:click="tab = 'comments'"
                                 x-bind:class="{ 'bg-white border-t-4 border-blue-600': tab === 'comments' }"
@@ -545,21 +529,14 @@
                         </div>
 
                         <ul class="bg-white text-sm rounded-b p-4">
-                            <li x-show="tab === 'activity'">
-                                activity
-                            </li>
-                            <li x-show="tab === 'timeline'">
-                                timeline
-                            </li>
                             <li x-show="tab === 'comments'">
-
                                 <form>
                                     <p><textarea name="comments" class="border w-full p-2" placeholder="Comment"></textarea> </p>
                                     <p><button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 mt-5 rounded">Add Comment</button></p>
                                 </form>
 
+                                <div style="max-width:800px;">
                                 <div class="flex mt-10">
-
                                     <div class="w-12 h-12 pt-3 relative mb-4">
                                         <div class="rounded-full overflow-hidden">
                                             <img src="https://pickaface.net/gallery/avatar/unr_random_180410_1905_z1exb.png" alt="" />
@@ -567,9 +544,49 @@
                                     </div>
                                     <div class="ml-5 w-11/12">
                                         <div class="text-xs text-right text-grey-500 w-full">created 12th October 2020 07:57:46 AM</div>
-                                        <div class="bg-gray-600 text-white rounded w-full p-2">I called Joe, no answer.</div>
+                                        <div class="bg-gray-600 text-white rounded w-full p-2">Halvah marzipan cookie. Tart jelly beans muffin jelly beans pastry. Donut jelly-o tiramisu. Sweet wafer dragée powder sweet.</div>
                                     </div>
                                 </div>
+
+                                <div class="flex mt-10">
+                                    <div class="ml-5 w-11/12">
+                                        <div class="text-xs text-right text-grey-500 w-full">created 27th September 2020 11:34:35 AM</div>
+                                        <div class="bg-gray-600 text-white rounded w-full p-2">Cupcake sweet gummies brownie sugar plum dragée chocolate bar muffin bear claw. Wafer caramels carrot cake jelly beans pudding jelly brownie. Pastry lemon drops halvah ice cream candy.</div>
+                                    </div>
+                                    <div class="w-12 h-12 pt-3 relative mb-4">
+                                        <div class="rounded-full overflow-hidden">
+                                            <img src="https://pickaface.net/gallery/avatar/unr_madalena5a_201012_1821_2omwk82.png" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex mt-10">
+                                    <div class="w-12 h-12 pt-3 relative mb-4">
+                                        <div class="rounded-full overflow-hidden">
+                                            <img src="https://pickaface.net/gallery/avatar/unr_random_180410_1905_z1exb.png" alt="" />
+                                        </div>
+                                    </div>
+                                    <div class="ml-5 w-11/12">
+                                        <div class="text-xs text-right text-grey-500 w-full">created 15th August 2020 10:47:06 AM</div>
+                                        <div class="bg-gray-600 text-white rounded w-full p-2">
+                                            Oat cake soufflé brownie jelly-o ice cream cotton candy. Apple pie gummies bonbon candy bear claw. Sesame snaps oat cake bear claw marzipan fruitcake halvah gummies. Brownie candy toffee jelly-o lemon drops sugar plum brownie. Apple pie icing powder donut chocolate cake jelly cupcake. Jelly-o pudding brownie apple pie. Tootsie roll bear claw pastry.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex mt-10">
+                                    <div class="ml-5 w-11/12">
+                                        <div class="text-xs text-right text-grey-500 w-full">created 5th August 2020 13:23:36 AM</div>
+                                        <div class="bg-gray-600 text-white rounded w-full p-2">Cupcake sweet gummies brownie sugar plum dragée chocolate bar muffin bear claw. Wafer caramels carrot cake jelly beans pudding jelly brownie. Pastry lemon drops halvah ice cream candy.</div>
+                                    </div>
+                                    <div class="w-12 h-12 pt-3 relative mb-4">
+                                        <div class="rounded-full overflow-hidden">
+                                            <img src="https://pickaface.net/gallery/avatar/unr_madalena5a_201012_1821_2omwk82.png" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                    </div>
 
                             </li>
                             <li x-show="tab === 'sentEmail'">
