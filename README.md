@@ -4,6 +4,9 @@ The theme sources files are located in public.
 
 ![AdminTW](dashboard.png)
 
+With dark mode support
+![AdminTW](dark.png)
+
 ## Run Tailwind
 The original source files to run Tailwind has been included to enable you to run the same setup.
 

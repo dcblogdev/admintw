@@ -11,7 +11,7 @@
 
 <div x-data="{ sidebarOpen: false }">
 
-<div class="flex justify-between bg-white border-b-1">
+<div class="flex justify-between bg-white dark:bg-gray-700 dark:text-white border-b-1">
 
     <div class="flex p-3">
 
@@ -22,13 +22,13 @@
             </svg>
         </button>
 
-        <a href="/index.html" class="font-bold">Admin<span class="text-blue-600">TW</span></a>
+        <a href="/index.html" class="font-bold">Admin<span class="text-blue-600 dark:text-blue-400">TW</span></a>
 
     </div>
 
     <div x-data="{ isOpen: false }">
         <div>
-            <button @click="isOpen = !isOpen" class="flex text-gray-700 focus:outline-none p-3 mr-5">
+            <button @click="isOpen = !isOpen" class="flex text-gray-700 dark:text-white focus:outline-none p-3 mr-5">
                 <p>Developer</p>
 
                 <svg x-show="!isOpen" class="ml-1 pt-1 w-5 lg:block" viewBox="0 0 20 20" fill="currentColor">
@@ -45,9 +45,9 @@
             x-show.transition="isOpen"
             @click.away="isOpen = false"
             class="origin-top-right absolute right-0 mr-5 w-48">
-            <div class="py-1 rounded-b-md bg-white shadow-xs">
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Settings</a>
-                <a href="login.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Log out</a>
+            <div class="py-1 rounded-b-md bg-white dark:bg-gray-700 shadow-xs">
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-400">Settings</a>
+                <a href="login.html" class="block px-4 py-2 text-sm text-gray-700 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-400">Log out</a>
             </div>
         </div>
     </div>
@@ -106,22 +106,6 @@
                                 </a>
                             </li>
                             <li class="p-2 hover:bg-gray-900">
-                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/accordians.html">
-                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-                                    </svg>
-                                     Accordians
-                                </a>
-                            </li>
-                            <li class="p-2 hover:bg-gray-900">
-                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/buttons.html">
-                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-                                    </svg>
-                                     Buttons
-                                </a>
-                            </li>
-                            <li class="p-2 hover:bg-gray-900">
                                  <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/cards.html">
                                     <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                       <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
@@ -130,51 +114,11 @@
                                 </a>
                             </li>
                             <li class="p-2 hover:bg-gray-900">
-                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/forms.html">
-                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-                                    </svg>
-                                     Forms
-                                </a>
-                            </li>
-                            <li class="p-2 hover:bg-gray-900">
-                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/icons.html">
-                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-                                    </svg>
-                                     Icons
-                                </a>
-                            </li>
-                            <li class="p-2 hover:bg-gray-900">
-                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/modals.html">
-                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-                                    </svg>
-                                     Modals
-                                </a>
-                            </li>
-                            <li class="p-2 hover:bg-gray-900">
                                  <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/tabs.html">
                                     <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                       <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
                                     </svg>
                                      Tabs
-                                </a>
-                            </li>
-                            <li class="p-2 hover:bg-gray-900">
-                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/tables.html">
-                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-                                    </svg>
-                                     Tables
-                                </a>
-                            </li>
-                            <li class="p-2 hover:bg-gray-900">
-                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/timeline.html">
-                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-                                    </svg>
-                                     Timeline
                                 </a>
                             </li>
                         </ul>
@@ -260,7 +204,7 @@
     <!--sidebar on mobile-->
     <div x-show.transition.origin.top.left="sidebarOpen" class="min-w-full bg-gray-800 md:hidden">
         <ul>
-            <li class="bg-gray-800 text-gray-300 text-sm p-3 hover:bg-gray-900 hover:text-gray-200">
+            <li class="bg-gray-900 text-gray-300 text-sm p-3 hover:bg-gray-900 hover:text-gray-200">
                 <a class="flex items-center" href="/index.html">
                     <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="15px" height="15px">
                       <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
@@ -278,7 +222,7 @@
                 </a>
             </li>
             <li>
-                <div x-data="{ isOpen: true }">
+                <div x-data="{ isOpen: false }">
                     <a @click="isOpen = !isOpen" x-on:click.prevent="" class="bg-gray-800 text-gray-300 text-sm p-3 hover:bg-gray-900 hover:text-gray-200 flex items-center" href="#">
 
                         <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -298,28 +242,12 @@
                     </a>
                     <div x-show="isOpen">
                         <ul>
-                            <li class="p-2 bg-gray-900 hover:bg-gray-900">
+                            <li class="p-2 hover:bg-gray-900">
                                  <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/alerts.html">
                                     <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                       <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
                                     </svg>
                                      Alerts
-                                </a>
-                            </li>
-                            <li class="p-2 hover:bg-gray-900">
-                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/accordians.html">
-                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-                                    </svg>
-                                     Accordians
-                                </a>
-                            </li>
-                            <li class="p-2 hover:bg-gray-900">
-                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/buttons.html">
-                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-                                    </svg>
-                                     Buttons
                                 </a>
                             </li>
                             <li class="p-2 hover:bg-gray-900">
@@ -331,51 +259,11 @@
                                 </a>
                             </li>
                             <li class="p-2 hover:bg-gray-900">
-                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/forms.html">
-                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-                                    </svg>
-                                     Forms
-                                </a>
-                            </li>
-                            <li class="p-2 hover:bg-gray-900">
-                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/icons.html">
-                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-                                    </svg>
-                                     Icons
-                                </a>
-                            </li>
-                            <li class="p-2 hover:bg-gray-900">
-                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/modals.html">
-                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-                                    </svg>
-                                     Modals
-                                </a>
-                            </li>
-                            <li class="p-2 hover:bg-gray-900">
                                  <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/tabs.html">
                                     <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                       <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
                                     </svg>
                                      Tabs
-                                </a>
-                            </li>
-                            <li class="p-2 hover:bg-gray-900">
-                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/tables.html">
-                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-                                    </svg>
-                                     Tables
-                                </a>
-                            </li>
-                            <li class="p-2 hover:bg-gray-900">
-                                 <a class="flex text-sm text-gray-200 hover:text-gray-300" href="/timeline.html">
-                                    <svg class="mr-1 h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-                                    </svg>
-                                     Timeline
                                 </a>
                             </li>
                         </ul>
@@ -459,9 +347,9 @@
     </div>
 
     <!-- main content -->
-    <div class="flex-grow bg-gray-200 px-4 py-2">
+    <div class="flex-grow bg-gray-200 dark:bg-gray-600 px-4 py-2">
 
-        <div class="flex justify-between text-gray-800">
+        <div class="flex justify-between text-gray-800 dark:text-white">
             <h1 class="text-3xl">Alerts</h1>
             <ul class="flex space-x-1 text-xs pt-5">
                 <li><a href="/index.html" class="font-bold">Home</a> > </li>
@@ -472,7 +360,7 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
 
-            <div class="bg-white text-gray-700 rounded-lg shadow-lg p-3">
+            <div class="bg-white dark:bg-gray-500 text-gray-700 rounded-lg shadow-lg p-3">
 
                 <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
                     <strong class="font-bold">Error!</strong>
@@ -490,11 +378,11 @@
                     </span>
                 </div>
 
-                <div class="bg-orange-100 border border-orange-400 text-orange-700 px-4 py-3 mt-5 rounded relative" role="alert">
+                <div class="bg-yellow-100 border border-yellow-400 text-yellow-700 px-4 py-3 mt-5 rounded relative" role="alert">
                     <strong class="font-bold">Warning!</strong>
                     <span class="block sm:inline">a warning notification.</span>
                     <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
-                        <svg class="fill-current h-6 w-6 text-orange-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
+                        <svg class="fill-current h-6 w-6 text-yellow-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
                     </span>
                 </div>
 
@@ -508,7 +396,7 @@
 
             </div>
 
-            <div class="bg-white text-gray-700 rounded-lg shadow-lg p-3">
+            <div class="bg-white dark:bg-gray-500 text-gray-700 rounded-lg shadow-lg p-3">
 
                 <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4" role="alert">
                     <p class="font-bold">Error!</p>
@@ -520,7 +408,7 @@
                     <p>Action successful.</p>
                 </div>
 
-                <div class="bg-orange-100 border-l-4 border-orange-500 text-orange-700 mt-5  p-4" role="alert">
+                <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 mt-5  p-4" role="alert">
                     <p class="font-bold">Warning</p>
                     <p>A warning notification.</p>
                 </div>
@@ -532,7 +420,7 @@
 
             </div>
 
-            <div class="bg-white text-gray-700 rounded-lg shadow-lg p-3">
+            <div class="bg-white dark:bg-gray-500 text-gray-700 rounded-lg shadow-lg p-3">
 
                 <div>
                     <div class="bg-red-500 text-white font-bold rounded-t px-4 py-2">
@@ -553,10 +441,10 @@
                 </div>
 
                 <div class="mt-5">
-                    <div class="bg-orange-500 text-white font-bold rounded-t px-4 py-2">
+                    <div class="bg-yellow-500 text-white font-bold rounded-t px-4 py-2">
                         Warning
                     </div>
-                    <div class="border border-t-0 border-orange-400 rounded-b bg-orange-100 px-4 py-3 text-orange-700">
+                    <div class="border border-t-0 border-yellow-400 rounded-b bg-yellow-100 px-4 py-3 text-yellow-700">
                         <p>A warning notification.</p>
                     </div>
                 </div>
@@ -572,7 +460,7 @@
 
             </div>
 
-            <div class="bg-white text-gray-700 rounded-lg shadow-lg p-3">
+            <div class="bg-white dark:bg-gray-500 text-gray-700 rounded-lg shadow-lg p-3">
 
                 <div class="p-2 bg-indigo-800 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex" role="alert">
                     <span class="flex rounded-full bg-indigo-500 uppercase px-2 py-1 text-xs font-bold mr-3">New</span>
@@ -608,9 +496,8 @@
 
 </div>
 
-<div class="bg-white p-2 flex justify-between text-xs">
-    <div>Copyright &copy; 2020 <a href="https://github.com/dcblogdev/admintw" target="_blank" class="text-blue-600">David Carr</a></div>
-    <div>Version 1.0.0</div>
+<div class="bg-white dark:bg-gray-700 dark:text-white p-5 flex justify-between text-xs">
+    <div>Copyright &copy; 2020 <a href="https://github.com/dcblogdev/admintw" target="_blank" class="text-blue-600 dark:text-blue-400">David Carr</a></div>
 </div>
 
 </div>
