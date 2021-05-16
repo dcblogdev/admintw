@@ -2,6 +2,8 @@
 
 The theme sources files are located in public.
 
+Laravle users see [https://github.com/dcblogdev/laravel-admintw](https://github.com/dcblogdev/laravel-admintw)
+
 ![AdminTW](dashboard.png)
 
 With dark mode support
